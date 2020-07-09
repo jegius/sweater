@@ -10,16 +10,16 @@ public class MessageDto {
     private String tag;
     private User author;
     private String filename;
-    private Long links;
+    private Long likes;
     private Boolean meLiked;
 
-    public MessageDto(Message message, Long links, Boolean meLiked) {
+    public MessageDto(Message message, Long likes, Boolean meLiked) {
         this.id = message.getId();
         this.text = message.getText();
         this.tag = message.getTag();
         this.author = message.getAuthor();
         this.filename = message.getFileName();
-        this.links = links;
+        this.likes = likes;
         this.meLiked = meLiked;
     }
 
@@ -43,8 +43,8 @@ public class MessageDto {
         return filename;
     }
 
-    public Long getLinks() {
-        return links;
+    public Long getLikes() {
+        return likes;
     }
 
     public Boolean getMeLiked() {
@@ -60,7 +60,7 @@ public class MessageDto {
         return "MessageDto{" +
                 "id=" + id +
                 ", author=" + author +
-                ", links=" + links +
+                ", links=" + likes +
                 ", meLiked=" + meLiked +
                 '}';
     }
